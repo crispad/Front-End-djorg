@@ -1,9 +1,10 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from "redux";
 import notes from "./notes";
-import auth from './auth';
+import auth from "./auth";
 
 const noteApp = combineReducers({
-    notes, auth,
-})
+  notes,
+  auth
+});
 
 export default noteApp;

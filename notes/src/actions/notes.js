@@ -1,5 +1,5 @@
 export const fetchNotes = () => {
-  return (dispatchEvent, getState) => {
+  return (dispatch, getState) => {
     let headers = { "Content-Type": "application/json" };
     let { token } = getState().auth;
 

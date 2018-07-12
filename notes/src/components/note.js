@@ -16,7 +16,8 @@ class Note extends Component {
     }
 
     editNote = (id) => {
-        this.setState({Title: '', Content: '', Category: '', updatedNoteId: null});
+        let note = this.props.notes[id];
+        this.setState({Title: note.Title, Content: note.Content, Category: note.Category, updatedNoteId: null});
     }
 
     submitNote = (event) => {
@@ -54,7 +55,7 @@ class Note extends Component {
                 <h3>Notes</h3>
                 <table>
                     <tbody>
-                        {this.props.notes.map(note, id)} => (
+                        {this.props.notes.map((note, id) => (
                             <tr key={`note_${note.id}`}>
                                 <td>{note.text}</td>
                                 <td><button onClick={() => this.editNote(id)}>edit</button></td>
