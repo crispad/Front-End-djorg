@@ -44,7 +44,7 @@ class RootContainerComponent extends Component {
         <Switch>
           <PrivateRoute exact path="/" component={note} />
           <Route exact path="/register" component={register} />
-          <Route exact path="login" component={login} />
+          <Route exact path="/login" component={login} />
         </Switch>
       </BrowserRouter>
     );
